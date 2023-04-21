@@ -22,3 +22,7 @@ keyword_ns = keyword_uc.replace(" ", "")
 
 # Convert the keyword to its corresponding letter values 0-25
 keyword_value = [ord(letter) - ord('A') for letter in keyword_ns]
+
+# Encryption of the message
+cipher_text = ''.join(chr((ord(letter) - ord('A') + keyword_value[index % len(keyword_ns)]) % 26 
++ ord('A')) for index, letter in enumerate(message_ns))
