@@ -7,3 +7,7 @@ import pyfiglet
 
 # Header for the activity
 print("Vigenere Cipher".center(70, "="))
+
+# Ask the user to input a message and key to be encrypted
+message = input("\033[95mEnter a message: ")
+keyword = input("\033[96mEnter a keyword: ")
