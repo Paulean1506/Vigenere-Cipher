@@ -19,3 +19,6 @@ keyword_uc = keyword.upper()
 # Remove spaces in the string
 message_ns = message_uc.replace(" ", "")
 keyword_ns = keyword_uc.replace(" ", "")
+
+# Convert the keyword to its corresponding letter values 0-25
+keyword_value = [ord(letter) - ord('A') for letter in keyword_ns]
