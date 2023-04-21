@@ -26,3 +26,10 @@ keyword_value = [ord(letter) - ord('A') for letter in keyword_ns]
 # Encryption of the message
 cipher_text = ''.join(chr((ord(letter) - ord('A') + keyword_value[index % len(keyword_ns)]) % 26 
 + ord('A')) for index, letter in enumerate(message_ns))
+
+# Print the ciphertext
+des = pyfiglet.figlet_format(cipher_text, font = "digital")
+print("\033[93mThe message: ", message_ns)
+print("\033[93mThe keyword: ", keyword_ns)
+print("\033[97mThe Ciphertext: ")
+print(des)
