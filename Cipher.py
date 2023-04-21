@@ -15,3 +15,7 @@ keyword = input("\033[96mEnter a keyword: ")
 # Look over the string and convert it to uppercase
 message_uc = message.upper()
 keyword_uc = keyword.upper()
+
+# Remove spaces in the string
+message_ns = message_uc.replace(" ", "")
+keyword_ns = keyword_uc.replace(" ", "")
